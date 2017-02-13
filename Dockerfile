@@ -26,6 +26,6 @@ RUN julia -e 'Pkg.add("PyPlot")'
 RUN julia -e 'Pkg.add("Gadfly")'
 RUN julia -e 'Pkg.add("SymEngine")'
 RUN julia -e 'Pkg.clone("https://github.com/EconForge/Dolang.git")'
-RUN ls
 RUN julia -e 'Pkg.clone("https://github.com/EconForge/Dyno.git")'
+RUN julia -e 'Pkg.build("Dyno")'
 RUN julia -e 'using Dyno;using IJulia;using SymEngine'
